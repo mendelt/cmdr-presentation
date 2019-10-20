@@ -1,8 +1,9 @@
 ---
 theme: metropolis
 title: CMDR - interactive command line interfaces
-
-
+toc: false
+slide_level: 2
+header-includes: \metroset{progressbar=frametitle,sectionpage=progressbar}
 ---
 
 # CMDR
