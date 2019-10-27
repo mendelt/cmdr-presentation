@@ -8,16 +8,17 @@ header-includes: \metroset{progressbar=frametitle,sectionpage=progressbar}
 ---
 
 ## CMDR
-Interactive command line interfaces in rust
+ or
+Procedural macro's for fun and profit
 
 ## About me
 - Recovering Python programmer
-- Programs Scala for money
-- Plays with Rust for fun, embedded hardware and synthesizers the rest of the time
+- I programs Scala for money
+- I play with Rust for fun
 
 ## This presentation
 - Part 1: Show off CMDR
-- Part 2: Show some inner workings
+- Part 2: How does it work
   - Procedural macros
 
 ## Some Python (Cmd)
@@ -38,35 +39,30 @@ if __name__ == '__main__':
     HelloWorld().cmdloop()
 ```
 
-## Rust problems
+## Rust 'problems'
 - No class based inheritance
   - But we do have traits
 - No introspection/reflection
   - But we do have macros
 
-## Stop! Demo time
+## Demo time
 - Simple commands
-- Docstring help
-- Prompt
-- Before command hook
+- Help
+- Changing the prompt
+- Command scopes
+- Hooks
 
-## More functions
-- Subcontexts
-- More hooks
-- Command history
-
-## Planned functionality before 1.0
-- More examples
+## Planned functionality for 1.0
+- More examples and documentation
 - Tab completion
   - Commands
   - Parameters
 - Typed argument parsing 
 
 ## Some usage suggestions
-- Login shell for applicances
-- Management application for
-- API demo
-- Old school dungeon crawler (example coming up)
+- Old school text based adventure/dungeon crawlers
+- Management application for your system
+- Test harness for an API
 
 ## More information 
 - crates.io
@@ -76,14 +72,16 @@ if __name__ == '__main__':
 - This presentation: github.com/mendelt/cmdr-presentation
 
 ## Macro's
-Three types
-- derive
--
+- macro_rules! macros
+  - println!
+  - vec![]
+- derive macros
+  - serde
 - procedural macros
 
 ## Procedural macro code example
+- Cmdr by hand
+- cargo expand
 
-## When to use procedural macros
-- Introspection/reflection, rust does not have this but macros are way cooler
-- Domain Specific Languages or code generation
+## Questions?
 
