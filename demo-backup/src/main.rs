@@ -2,15 +2,10 @@ use cmdr::*;
 
 struct Application {}
 
-#[cmdr(help="This is an application that can greet people")]
+#[cmdr(help="This is an application that greets people")]
 impl Application {
     fn prompt(&self) -> String {
         "%% ".to_string()
-    }
-
-    fn before_command(&mut self, _line: Line) -> Line {
-        println!("Do something before\n");
-        _line
     }
 
     #[cmd(hello)]
@@ -23,6 +18,12 @@ impl Application {
     #[cmd(quit, help="help text\nquitter!")]
     fn quit_method(&self, _args: &[String]) -> CommandResult {
         CommandResult::Quit
+    }
+
+    fn default(&mut self, command: &Line) -> CommandResult {
+        println!("{} ??", command.command);
+
+        CommandResult::Ok
     }
 }
 
