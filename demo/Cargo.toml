@@ -5,4 +5,4 @@ authors = ["Mendelt Siebenga <msiebenga@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-cmdr = "0.3"
+cmdr = "0.3.11"
